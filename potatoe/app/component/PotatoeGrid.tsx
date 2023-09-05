@@ -10,7 +10,7 @@ import grid7 from '../../public/assets/grid7.jpg'
 
 function PotatoeGrid() {
   return (
-    <div className='flex justify-center align-center w-full bg-gray-50'>
+    <div className='flex justify-center align-center w-full bg-gray-50 mb-14'>
         <h3 className='text-3xl'>Experience Potatoes</h3>
         <div className="grid grid-cols-4 grid-rows-4 gap-2 grid-flow-row bg-gray-50 w-4/6 ml-4 h-96">
             {/* <div className='row-span-4 rounded-md bg-blue-400'>1</div> */}
