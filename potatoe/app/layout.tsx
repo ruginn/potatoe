@@ -2,6 +2,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Inter, Libre_Baskerville, Cormorant_Garamond } from 'next/font/google'
 import Navbar from './component/Navbar'
+import AuthProvider from './AuthProvider'
 
 const inter = Inter({ subsets: ['latin'] })
 const corm = Cormorant_Garamond({
@@ -20,11 +21,13 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={corm.className}>
-        <Navbar/>
-        {children}
-      </body>
-    </html>
+    <AuthProvider>
+      <html lang="en">
+        <body className={corm.className}>
+          <Navbar/>
+          {children}
+        </body>
+      </html>
+    </AuthProvider>
   )
 }

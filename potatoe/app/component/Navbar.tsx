@@ -1,3 +1,6 @@
+import { SignInButton, SignOutButton } from "./Login/LoginButton"
+import AuthCheck from "./AuthCheck"
+
 export default function Navbar () {
     return (
         <div className="flex w-full justify-between h-12 items-center">
@@ -7,8 +10,13 @@ export default function Navbar () {
             </div>
             {/* <h1 className="text-3xl m-3  cursor-pointer">El potatoe</h1> */}
             <ul className="flex">
-                <li className="mx-3 cursor-pointer">Login</li>
-                <li className="mx-3 cursor-pointer">Register</li>
+                <li className="mx-3 cursor-pointer"><SignInButton/></li>
+                <li className="mx-3 cursor-pointer">
+                    <AuthCheck>
+                        <SignOutButton/>
+                    </AuthCheck>
+                </li>
+                {/* <li className="mx-3 cursor-pointer">Register</li> */}
             </ul>
         </div>
     )
