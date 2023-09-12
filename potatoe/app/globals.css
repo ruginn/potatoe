@@ -9,7 +9,8 @@
 
 .outline--text--1 {
   /* text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black; */
-  -webkit-text-stroke: .75px black;
+  -webkit-text-stroke: .75px white;
+  
 }
 
 /* :root {

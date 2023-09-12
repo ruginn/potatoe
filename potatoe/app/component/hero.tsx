@@ -2,17 +2,27 @@
 import Image from "next/image"
 import {motion} from 'framer-motion'
 import potatoe from '../../public/assets/potatoe.png' 
+import PotatoeField from '../../public/assets/potatoe-feild-sunset.jpg'
 
 export default function Hero () {
     return (
-        <div className="w-full flex align-center justify-center bg-gray-50">
-            <div className="w-[900px] flex mt-4 bg-gray-50 border-8 border-black mb-8 relative align-center justify-center">
+        <div className="w-screen h-[80vh] flex justify-center items-center bg-transparent relative ">
+            <div className="w-full h-full absolute -z-20 -mt-24">
+                <Image 
+                    src={PotatoeField}
+                    alt='Potatoe Field'
+                    fill={true}
+                    objectFit="cover"
+                />
+            </div>
+            <div className="absolute w-full h-full -z-10 bg-slate-900 opacity-50 -mt-24"></div>
+            <div className="w-[900px] h-72 flex bg-transparent border-8 border-white relative items-center justify-center">
                 <div className="relative">
-                    <h1 className="text-9xl absolute font-medium">THIS IS</h1>
-                    <h1 className="text-9xl outline--text--2 text-transparent z-10 relative font-medium">THIS IS</h1>
+                    <h1 className="text-8xl absolute font-medium text-black">THIS IS</h1>
+                    <h1 className="text-8xl outline--text--2 text-transparent z-10 relative font-medium">THIS IS</h1>
                     {/* <h1 className="text-9xl font-medium absolute ">THIS IS</h1> */}
-                    <h1 className="text-9xl absolute font-medium">POTATOE</h1>
-                    <h1 className="text-9xl outline--text--2 text-transparent z-10 relative font-medium">POTATOE</h1> 
+                    <h1 className="text-8xl absolute font-medium text-black">POTATOE</h1>
+                    <h1 className="text-8xl outline--text--2 text-transparent z-10 relative font-medium">POTATOE</h1> 
                 </div>
                 <motion.div 
                     variants={{
@@ -20,8 +30,7 @@ export default function Hero () {
                         visible: {opacity: 1, y:0}
                     }}
                     // initial ='hidden'
-                    animate = {{x:-720,
-                        //  rotate:360
+                    animate = {{x:-720
                         }}
                     transition = {{duration: 4, delay: 0, type: 'spring'}}
                     className="absolute -right-2 -bottom-4">
