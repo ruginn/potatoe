@@ -10,10 +10,10 @@ import grid7 from '../../public/assets/grid7.jpg'
 
 function PotatoeGrid() {
   return (
-    <div className='flex flex-col justify-center items-center w-screen bg-gray-50 mb-14'>
-        <h3 className='text-6xl leading-[60px] text-center'>Our mission is to rank and review different potato varieties based on flavor, texture, and versatility.</h3>
-        <h3 className='text-2xl text-center'>We aim to help you find the perfect potato for any culinary adventure.</h3>
-        <div className="grid grid-cols-4 grid-rows-4 gap-2 grid-flow-row bg-gray-50 w-full ml-4 h-96">
+    <div className='flex flex-col justify-center items-center w-full bg-gray-50 mb-14'>
+        <h3 className='text-6xl leading-[60px] text-center'>We aim to help you find the perfect potato for any culinary adventure.</h3>
+        <h3 className='text-2xl text-center'>Our mission is to rank and review different potato varieties based on flavor, texture, and versatility.</h3>
+        <div className="grid grid-cols-4 grid-rows-4 gap-2 grid-flow-row bg-gray-50 w-5/6 ml-4 h-96">
             {/* <div className='row-span-4 rounded-md bg-blue-400'>1</div> */}
             <Image src={grid1} className='row-span-4 rounded-lg h-[100%] object-cover'/>
             {/* <div className="bg-blue-200 rounded-md">2</div> */}
