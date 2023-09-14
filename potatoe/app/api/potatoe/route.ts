@@ -65,19 +65,6 @@ const potatoes : Potato[] = [
       },
       {
         id: 5,
-        name: "New Potatoes",
-        image: "",
-        details: {
-          description: "New potatoes are young potatoes harvested before they reach maturity. They are small, tender, and often used in boiling, steaming, or roasting.",
-          best_uses: [
-            "Boiling",
-            "Steaming",
-            "Roasting"
-          ]
-        }
-      },
-      {
-        id: 6,
         name: "Purple Potatoes",
         image: "",
         details: {
@@ -90,20 +77,7 @@ const potatoes : Potato[] = [
         }
       },
       {
-        id: 7,
-        name: "Adirondack Blue Potatoes",
-        image: "",
-        details: {
-          description: "Adirondack Blue potatoes have striking blue-purple flesh and are suitable for mashing, roasting, or making colorful salads.",
-          best_uses: [
-            "Mashed Potatoes",
-            "Roasting",
-            "Salads"
-          ]
-        }
-      },
-      {
-        id: 8,
+        id: 6,
         name: "Yellow Finn Potatoes",
         image: "",
         details: {
@@ -116,7 +90,7 @@ const potatoes : Potato[] = [
         }
       },
       {
-        id: 9,
+        id: 7,
         name: "Kennebec Potatoes",
         image: "",
         details: {
@@ -129,57 +103,7 @@ const potatoes : Potato[] = [
         }
       },
       {
-        id: 10,
-        name: "German Butterball Potatoes",
-        image: "",
-        details: {
-          description: "German Butterball potatoes are small, round, and have a creamy, buttery taste. They are ideal for mashing or roasting.",
-          best_uses: [
-            "Mashed Potatoes",
-            "Roasting"
-          ]
-        }
-      },
-      {
-        id: 11,
-        name: "La Ratte Potatoes",
-        image: "",
-        details: {
-          description: "La Ratte potatoes are a popular French fingerling potato with a delicate, nutty flavor. They are often used for roasting or making potato salads.",
-          best_uses: [
-            "Roasting",
-            "Potato Salad"
-          ]
-        }
-      },
-      {
-        id: 12,
-        name: "Purple Majesty Potatoes",
-        image: "",
-        details: {
-          description: "Purple Majesty potatoes are known for their deep purple color. They're high in antioxidants and can be used in various dishes like mashed potatoes and potato chips.",
-          best_uses: [
-            "Mashed Potatoes",
-            "Potato Chips",
-            "Colorful Dishes"
-          ]
-        }
-      },
-      {
-        id: 13,
-        name: "All Blue Potatoes",
-        image: "",
-        details: {
-          description: "All Blue potatoes have blue skin and blue flesh. They are often used for making colorful chips or mashed potatoes.",
-          best_uses: [
-            "Mashed Potatoes",
-            "Potato Chips",
-            "Colorful Dishes"
-          ]
-        }
-      },
-      {
-        id: 14,
+        id: 8,
         name: "Maris Piper Potatoes",
         image: "",
         details: {
@@ -191,7 +115,7 @@ const potatoes : Potato[] = [
         }
       },
       {
-        id: 15,
+        id: 9,
         name: "Yam Potatoes (Sweet Potatoes)",
         image: "",
         details: {

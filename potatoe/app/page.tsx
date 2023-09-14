@@ -5,12 +5,14 @@ import Goop from "./component/Goop"
 import CardSlider from "./component/CardSlider"
 
 export default function Home() {
+
+
   return (
     <main >
       <Hero />
       <PotatoeGrid />
       {/* <PotatoeBanner /> */}
-      <Goop />
+      {/* <Goop /> */}
       <CardSlider />
     </main>
   )
