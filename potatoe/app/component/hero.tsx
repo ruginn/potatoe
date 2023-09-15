@@ -1,4 +1,4 @@
-'use client'
+// 'use client'
 import Image from "next/image"
 import {motion} from 'framer-motion'
 import potatoe from '../../public/assets/potatoe.png' 

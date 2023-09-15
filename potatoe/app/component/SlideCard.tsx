@@ -1,4 +1,5 @@
-import Image from "next/image"
+'use client'
+import Image, { StaticImageData } from "next/image"
 import Potato1 from '../../public/assets/russet.webp'
 import Potato2 from '../../public/assets/yukon.jpeg'
 import Potato3 from '../../public/assets/redpotato.webp'
@@ -16,7 +17,7 @@ import {BsStarFill, BsStarHalf, BsStar } from 'react-icons/bs'
 interface Potato {
     id: number;
     name: string; 
-    image: string;
+    image: StaticImageData;
     details: {}
 
 }
@@ -35,13 +36,14 @@ function SlideCard({potato} : Potato) {
     9: Potato9
   }      
   return (
-    <div className="inline-block">
-        <div className="flex flex-row w-[470px] h-56 bg-gradient-to-br from-gray-100 via-slate-300 to-gray-300 m-0.5 relative mb-24 rounded-3xl">
+    <div className="inline-block hover:scale-105 ease-in-out duration-150">
+        <div className="flex flex-row w-[470px] h-56 bg-gradient-to-br from-gray-100 via-slate-300 to-gray-300 relative mb-24 rounded-3xl">
             <div className="w-3/6">
                 <div className="absolute h-60 w-40 top-6 left-6 drop-shadow-2xl">
                     <Image
                         className="rounded-xl drop-shadow-2xl"
-                        src ={potatoePic[potato.id]}
+                        // src ={potatoePic[potato.id]}
+                        src = {potato.image}
                         fill= {true}
                         objectFit="cover"
                         alt=''
