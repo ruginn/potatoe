@@ -38,7 +38,7 @@ useEffect(() => {
   return (
     <div className="flex flex-row items-center relative"> 
       <BsFillArrowLeftCircleFill  onClick={slideLeft} className='opacity-50 cursor-pointer absolute w-12 h-12 mb-24 z-30 left-1 fill-slate-50 hover:opacity-100'/>
-        <div id='slide' className="flex flex-row gap-5 mb-20 pt-20 overflow-x-scroll scroll whitespace-nowrap scroll-smooth overflow-y-hidden pl-6 scrollbar-hide">
+        <div id='slide' className="flex flex-row gap-5  pt-20 overflow-x-scroll scroll whitespace-nowrap scroll-smooth overflow-y-hidden pl-6 scrollbar-hide">
           {potatoe? potatoe.map((potato : Potato) => (
               <SlideCard potato={potato} key={potato.id} />
           )) : ''}

@@ -42,9 +42,9 @@ export default function Hero () {
                 </motion.div>
             </div> */}
             <div className="w-full flex flex-col justify-center items-center text-center mb-[400px]">
-                <h1 className="text-4xl text-white font-bold tracking-[20px]">{'Welcome to the'.toUpperCase()}</h1>
-                <h1 className="text-4xl text-white font-bold tracking-[20px]">{'Ultimate Potato'.toUpperCase()}</h1>
-                <h1 className="text-4xl text-white font-bold tracking-[20px]">{'Ranking Website!'.toUpperCase()}</h1>
+                <h1 className="text-4xl lg:text-6xl text-white font-bold tracking-[20px] select-none">{'Welcome to the'.toUpperCase()}</h1>
+                <h1 className="text-4xl lg:text-6xl text-white font-bold tracking-[20px] select-none">{'Ultimate Potato'.toUpperCase()}</h1>
+                <h1 className="text-4xl lg:text-6xl text-white font-bold tracking-[20px] select-none">{'Ranking Website!'.toUpperCase()}</h1>
             </div>
         </div>
     )
