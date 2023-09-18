@@ -16,7 +16,7 @@ function CardSlider() {
   // const potatoe= await fetch('http://localhost:3000/api/potatoes').then(
   //   (res) => res.json()
   // )
-const [potatoe, setPotatoe] = useState('')
+const [potatoe, setPotatoe] = useState([])
 
 useEffect(() => {
   const potatoFetcher = fetch('http://localhost:3000/api/potatoes')

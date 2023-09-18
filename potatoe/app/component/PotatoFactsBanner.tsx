@@ -1,25 +1,43 @@
 'use client'
-import {motion} from 'framer-motion'
+import {motion, useScroll, useTransform} from 'framer-motion'
 import Potato from '../../public/assets/potatoe.png'
 import Image from 'next/image'
 import Link from 'next/link'
+import {useRef} from 'react'
+
 
 function PotatoeFactsBanner() {
+  const ref = useRef(null)
+  const {scrollYProgress} = useScroll({
+    target: ref, 
+    offset: ["0 1", "1.33, 1"],
+  })
+
+  const x1 = useTransform(scrollYProgress, [0,1], [-1000, 100])
+
+  console.log(scrollYProgress)
+
   return (
     <div className='w-screen h-screen flex flex-row'>
         <div className='flex flex-col w-3/6 h-full bg-gradient-to-tr from-amber-200 via-yellow-100 to-amber-100 justify-center items-center shadow-inner relative'>
             <motion.div
-                initial={{x:-500, rotate: 45, }}
-                whileInView={{x:1}}
-                transition={{
-                  duration: 2,
-                  ease: "easeInOut",
-                  // repeat: Infinity,
-                  // repeatDelay: 1
+                initial={{ rotate: 45, }}
+                // whileInView={{x:1}}
+                // transition={{
+                //   duration: 2,
+                //   ease: "easeInOut",
+                //   // repeat: Infinity,
+                //   // repeatDelay: 1
+                // }}
+                style={{
+                  // scale: scrollYProgress, 
+                  // opacity: scrollYProgress, 
+                  x: x1
                 }}
                 className='absolute'
               >
                 <Image 
+                  ref={ref}
                   src={Potato}
                   alt=''
                   height={700}
@@ -45,7 +63,7 @@ function PotatoeFactsBanner() {
                 className='absolute w-64 h-64 rounded-full bg-amber-200 -z-20 right-[50px] top-[50px] blur-2xl opacity-80'></motion.div>
                 <div className='absolute w-96 h-64 rounded-full bg-green-300 -z-20 right-[200px] top-[100px] blur-2xl opacity-80'></div>
                 <div className='absolute w-96 h-96 rounded-full bg-blue-300 -z-20 right-[80px] top-[300px] blur-2xl opacity-50'></div>
-                <div className='absolute w-full h-full bg-slate-100 opacity-60 -z-10 blur-3xl'></div>
+                <div className='absolute left-0 w-full h-full bg-slate-100 opacity-60 -z-10 blur-3xl'></div>
                 <h1 className='text-8xl font-bold'>Origin</h1>
                 <p className='text-3xl my-4'>Potatoes were first cultivated by indigenous peoples in the Andes Mountains of South America over 7,000 years ago. They have been a staple food in the region ever since.</p>
                 <Link href='/facts'>
