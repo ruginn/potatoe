@@ -6,13 +6,13 @@ import {useRef} from 'react'
 
 function PotatoFacts() {
   const ref = useRef(null)
-  const {scrollYProgress} = useScroll({
-    target: ref, 
-    offset: ['0 1', '0.5, 1']
-  })
+  // const {scrollYProgress} = useScroll({
+  //   target: ref, 
+  //   offset: ['0 1', '1.1, 1']
+  // })
 
-  const x1 = useTransform(scrollYProgress, [0,1], [-1000, 0])
-  const x2 = useTransform(scrollYProgress, [0,1], [1000, 0])
+  // const x1 = useTransform(scrollYProgress, [0,1], [-1000, 0])
+  // const x2 = useTransform(scrollYProgress, [0,1], [1000, 0])
 
   const [facts, setFacts] = useState([])
 
@@ -32,15 +32,15 @@ function PotatoFacts() {
             facts.slice(1).map((fact : any) => {
               if (fact.id % 2 === 0) {
                 return (
-                  <motion.div ref={ref} className="h-auto bg-stone-400 w-96" style={{x: x1}}>
-                    <h1 className="text-3xl">{fact.id}</h1>
+                  <motion.div whileInView={{y: -10, opacity: 1}} transition={{ ease: "easeOut", duration: 1 }} initial={{opacity: 0}} className="h-auto bg-stone-400 w-[500px] p-10 my-4">
+                    <h1 className="text-3xl">{fact.title}</h1>
                     <p className="text-lg">{fact.fact}</p>
                   </motion.div>
                 )
               } else  {
                 return (
-                  <motion.div ref={ref} className="h-auto bg-indigo-300 w-96" style={{x: x2}}>
-                    <h1 className="text-3xl">{fact.id}</h1>
+                  <motion.div whileInView={{y: -10, opacity: 1}} transition={{ ease: "easeOut", duration: 1 }} initial={{opacity: 0}} className="h-auto bg-indigo-300 w-[500px] p-10 my-4">
+                    <h1 className="text-3xl">{fact.title}</h1>
                     <p className="text-lg">{fact.fact}</p>
                   </motion.div>
                 )
