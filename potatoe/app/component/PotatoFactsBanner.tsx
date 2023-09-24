@@ -59,7 +59,6 @@ function PotatoeFactsBanner() {
         </div>
         <div className='w-3/6 h-full flex flex-col justify-center px-12 pb-20 relative '>
                 <motion.div 
-                
                 className='absolute w-64 h-64 rounded-full bg-amber-200 -z-20 right-[50px] top-[50px] blur-2xl opacity-80'></motion.div>
                 <div className='absolute w-96 h-64 rounded-full bg-green-300 -z-20 right-[200px] top-[100px] blur-2xl opacity-80'></div>
                 <div className='absolute w-96 h-96 rounded-full bg-blue-300 -z-20 right-[80px] top-[300px] blur-2xl opacity-50'></div>
