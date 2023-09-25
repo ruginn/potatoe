@@ -1,16 +1,6 @@
 'use client'
 import Image, { StaticImageData } from "next/image"
-import Potato1 from '../../public/assets/russet.webp'
-import Potato2 from '../../public/assets/yukon.jpeg'
-import Potato3 from '../../public/assets/redpotato.webp'
-import Potato4 from '../../public/assets/fingerlingpotatoe.jpeg'
-import Potato5 from '../../public/assets/purplepotatoe.jpeg'
-import Potato6 from '../../public/assets/yellowfinnpotatoe.jpeg'
-import Potato7 from '../../public/assets/kennebecpotatoes.jpeg'
-import Potato8 from '../../public/assets/maris.webp'
-import Potato9 from '../../public/assets/sweet-potatoes.jpeg'
-
-
+import Link from "next/link"
 import {BsStarFill, BsStarHalf, BsStar } from 'react-icons/bs'
 
 
@@ -23,18 +13,7 @@ interface Potato {
 }
 
 function SlideCard({potato} : Potato) {
-
-  const potatoePic = {
-    1: Potato1, 
-    2: Potato2, 
-    3: Potato3, 
-    4: Potato4, 
-    5: Potato5, 
-    6: Potato6, 
-    7: Potato7, 
-    8: Potato8, 
-    9: Potato9
-  }      
+     
   return (
     <div className="inline-block hover:scale-105 ease-in-out duration-150">
         <div className="flex flex-row w-[470px] h-56 bg-gradient-to-br from-gray-100 via-slate-300 to-gray-300 relative mb-24 rounded-3xl">
@@ -61,7 +40,9 @@ function SlideCard({potato} : Potato) {
                     <p className="text-white mb-1 ml-2">3,454 ratings</p>
                 </div>
                 <p className="text-white text-sm leading-none mt-2 whitespace-normal">{potato.details.description}</p>
-                <button className="w-10/12 h-6 text-black font-bold drop-shadow-2xl bg-slate-50 rounded-lg mt-5 text-sm">See More</button>
+                <Link href={`/potatoes/${potato.id}`}>
+                    <button className="w-10/12 h-6 text-black font-bold drop-shadow-2xl bg-slate-50 rounded-lg mt-5 text-sm">See More</button>
+                </Link>
             </div>
         </div>
     </div>

@@ -1,5 +1,8 @@
 import { StaticImageData } from "next/image";
 import Image from 'next/image'
+import PotatoRater from "@/app/component/PotatoRater";
+import { getServerSession } from "next-auth";
+import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 
 interface Potato {
     id: number;
@@ -18,6 +21,9 @@ async function PotatoPage({params}: any) {
     const potato = potatoes.find((potato) => potato.id.toString() === params.id)!
     console.log(potato)
     
+    const session = await getServerSession(authOptions)
+    console.log(session)
+
   return (
     <div>   
         <Image 
@@ -33,7 +39,7 @@ async function PotatoPage({params}: any) {
                 <li>{use}</li>
             )
         })}
-
+        <PotatoRater potato={potato.name} />
     </div>
   )
 }
