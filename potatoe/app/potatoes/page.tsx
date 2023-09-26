@@ -2,6 +2,7 @@ import { StaticImageData } from "next/image";
 import  Image  from "next/image";
 import Link from "next/link";
 
+
 interface Potato {
   id: number;
   name: string; 
@@ -10,7 +11,6 @@ interface Potato {
     description: string;
     best_uses: string[]
   }
-
 }
 
 async function page() {
