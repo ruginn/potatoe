@@ -39,7 +39,7 @@ async function PotatoPage({params}: any) {
                 <li>{use}</li>
             )
         })}
-        <PotatoRater potato={potato.name} />
+        <PotatoRater potato={potato} />
     </div>
   )
 }
