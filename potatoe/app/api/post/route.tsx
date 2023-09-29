@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { getServerSession } from "next-auth";
 import {prisma} from '@/lib/prisma'
 import { authOptions } from '../auth/[...nextauth]/route'
-import { isJSDocLinkLike } from "typescript";
+
 
 export async function POST(req: Request) {
     const session = await getServerSession(authOptions)
