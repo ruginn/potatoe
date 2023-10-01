@@ -12,15 +12,20 @@ export async function POST(req: Request) {
     console.log('thisi is data  below')
     console.log(data)
     console.log('this is sdata above')
-    const user = await prisma.user.findUnique({
-        where: {
-          email: currentUserEmail,
-        },
-      })
+    // const user = await prisma.user.findUnique({
+    //     where: {
+    //       email: currentUserEmail,
+    //     },
+    //   })
+    const deleteposts = await prisma.post.deleteMany({
+      where: {
+        rating: 5
+      },
+    })
+    console.log(deleteposts)
+    // const newPost = await prisma.post.create({data: {post: data.post, rating: data.rating, userId: user?.id}})
 
-    const newPost = await prisma.post.create({data: {post: data.post, rating: data.rating, userId: user?.id}})
+    // console.log(user)
 
-    console.log(user)
-
-    return NextResponse.json(newPost)
+    return NextResponse.json(deleteposts)
 }

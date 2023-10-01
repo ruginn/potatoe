@@ -70,10 +70,10 @@ model Post {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
   user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-  // potato    Potato   @relation(fields: [potatoId], references: [id], onDelete: Cascade)
+  potato    Potato   @relation(fields: [potatoId], references: [id], onDelete: Cascade)
 }
 
-// model Potato {
-//   id    String @id @default(cuid())
-//   posts Post[]
-// }
+model Potato {
+  id    String @id @default(cuid())
+  posts Post[]
+}
