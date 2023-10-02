@@ -18,19 +18,15 @@ export async function POST(req: Request) {
           email: currentUserEmail,
         },
       })
-    const DbPotatoId = await prisma.potato.findUnique({
-      where: {
-        id: data.potatoId 
-      }
-    })
-    console.log(DbPotatoId)
+    
+    
     // const newPotato = await prisma.potato.create({data: {potatoId: data.potatoId}})
     // const deletePotato = await prisma.potato.deleteMany({
     //   where: {
     //     potatoId: data.potatoid
     //   }
     // })
-    // const newPost = await prisma.post.create({data: {post: data.post, rating: data.rating, userId: user?.id}})
+    const newPost = await prisma.post.create({data: {post: data.post, rating: data.rating, userId: user?.id, potatoId: data.potatoId}})
 
 
     // console.log(user)

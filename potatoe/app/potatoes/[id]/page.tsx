@@ -15,7 +15,7 @@ interface Potato {
   }
 
 async function PotatoPage({params}: any) {
-    const potatoes : Potato[] = await fetch('http:localhost:3000/api/potatoes')
+    const potatoes : Potato[] = await fetch('http:localhost:3000/api/potato')
     .then((res) => res.json())
 
     const potato = potatoes.find((potato) => potato.id.toString() === params.id)!
@@ -26,7 +26,7 @@ async function PotatoPage({params}: any) {
     // console.log(potato)
   return (
     <div>   
-        {/* <Image 
+        <Image 
         src={potato.image}
         alt=''
         className="w-64 h-64 object-cover"
@@ -39,8 +39,7 @@ async function PotatoPage({params}: any) {
                 <li>{use}</li>
             )
         })}
-        <PotatoRater potato={potato} /> */}
-        <h1>testing</h1>
+        <PotatoRater potato={potato} />
     </div>
   )
 }
