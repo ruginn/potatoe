@@ -5,7 +5,7 @@ import { getServerSession } from "next-auth";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 
 interface Potato {
-    id: number;
+    id: string| number;
     name: string; 
     image: StaticImageData;
     details: {
@@ -16,17 +16,17 @@ interface Potato {
 
 async function PotatoPage({params}: any) {
     const potatoes : Potato[] = await fetch('http:localhost:3000/api/potatoes')
-      .then((res) => res.json())
+    .then((res) => res.json())
 
     const potato = potatoes.find((potato) => potato.id.toString() === params.id)!
-    console.log(potato)
+    console.log(potatoes)
     
-    const session = await getServerSession(authOptions)
-    console.log(session)
-
+    // const session = await getServerSession(authOptions)
+    // console.log(session)
+    // console.log(potato)
   return (
     <div>   
-        <Image 
+        {/* <Image 
         src={potato.image}
         alt=''
         className="w-64 h-64 object-cover"
@@ -39,7 +39,8 @@ async function PotatoPage({params}: any) {
                 <li>{use}</li>
             )
         })}
-        <PotatoRater potato={potato} />
+        <PotatoRater potato={potato} /> */}
+        <h1>testing</h1>
     </div>
   )
 }

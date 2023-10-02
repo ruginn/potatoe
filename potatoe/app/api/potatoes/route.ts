@@ -13,7 +13,7 @@ import { StaticImageData } from 'next/image';
 
 
 interface Potato {
-    id: number;
+    id: string| number;
     name: string; 
     image: StaticImageData;
     details: {}
@@ -22,7 +22,7 @@ interface Potato {
 
 const potatoes : Potato[] = [
       {
-        id: 1,
+        id: 'cln861xuw0002v26xxr28ipsw',
         name: "Russet Potatoes",
         image: Potato1,
         details: {
@@ -35,7 +35,7 @@ const potatoes : Potato[] = [
         }
       },
       {
-        id: 2,
+        id: 'cln862z2z0003v26xmukioa6o',
         name: "Yukon Gold Potatoes",
         image: Potato2,
         details: {
@@ -48,7 +48,7 @@ const potatoes : Potato[] = [
         }
       },
       {
-        id: 3,
+        id: 'cln8634se0004v26xmxu76evi',
         name: "Red Potatoes",
         image: Potato3,
         details: {
@@ -61,7 +61,7 @@ const potatoes : Potato[] = [
         }
       },
       {
-        id: 4,
+        id: 'cln863g830005v26x5r8d4l0l',
         name: "Fingerling Potatoes",
         image: Potato4,
         details: {
@@ -74,7 +74,7 @@ const potatoes : Potato[] = [
         }
       },
       {
-        id: 5,
+        id: 'cln863jtg0006v26xr4d19xt9',
         name: "Purple Potatoes",
         image: Potato5,
         details: {
@@ -87,7 +87,7 @@ const potatoes : Potato[] = [
         }
       },
       {
-        id: 6,
+        id: 'cln863n2k0007v26xrq21u0mm',
         name: "Yellow Finn Potatoes",
         image: Potato6,
         details: {
@@ -100,7 +100,7 @@ const potatoes : Potato[] = [
         }
       },
       {
-        id: 7,
+        id: 'cln863prq0008v26xs6tqsxmp',
         name: "Kennebec Potatoes",
         image: Potato7,
         details: {
@@ -113,7 +113,7 @@ const potatoes : Potato[] = [
         }
       },
       {
-        id: 8,
+        id: 'cln863s6v0009v26xm6gsdtzj',
         name: "Maris Piper Potatoes",
         image: Potato8,
         details: {
@@ -125,7 +125,7 @@ const potatoes : Potato[] = [
         }
       },
       {
-        id: 9,
+        id: 'cln863w8j000av26xun58qsom',
         name: "Yam Potatoes (Sweet Potatoes)",
         image: Potato9,
         details: {
