@@ -20,7 +20,7 @@ export async function POST(req: Request) {
       })
     
     
-    // const newPotato = await prisma.potato.create({data: {potatoId: data.potatoId}})
+    // const newPotato = await prisma.potato.create({data: {potatoId: data.potatoId, potatoName: data.potatoName}})
     // const deletePotato = await prisma.potato.deleteMany({
     //   where: {
     //     potatoId: data.potatoid
@@ -34,13 +34,13 @@ export async function POST(req: Request) {
     return NextResponse.json('it worked')
 }
 
-export async function GET(req: Request) {
-  const data = await req.json()
-  const posts = await prisma.post.findMany({
-    where: {
-      id: data.id
-    }
-  })
+// export async function GET(req: Request) {
+//   const data = await req.json()
+//   const posts = await prisma.post.findMany({
+//     where: {
+//       id: data.id
+//     }
+//   })
   
-  return NextResponse.json(posts)
-}
+//   return NextResponse.json('this is working')
+// }

@@ -15,7 +15,9 @@ interface Potato {
 
 async function page() {
 
-  const potatoes : Potato[] = await fetch('http://localhost:3000/api/potatoes')
+  const potatoes : Potato[] = await fetch('http://localhost:3000/api/potato', {
+    cache: 'no-cache'
+  })
     .then((res) => res.json())  
 
 

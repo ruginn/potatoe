@@ -16,7 +16,9 @@ interface Potato {
   }
 
 async function PotatoPage({params}: any) {
-    const potatoes : Potato[] = await fetch('http:localhost:3000/api/potato')
+    const potatoes : Potato[] = await fetch('http:localhost:3000/api/potato', {
+      cache: "no-cache"
+    })
     .then((res) => res.json())
 
     const potato = potatoes.find((potato) => potato.id.toString() === params.id)!
@@ -41,7 +43,7 @@ async function PotatoPage({params}: any) {
             )
         })}
         <PotatoRater potato={potato} />
-        <UserRatings potato={potato}/>
+        {/* <UserRatings potato={potato}/> */}
     </div>
   )
 }

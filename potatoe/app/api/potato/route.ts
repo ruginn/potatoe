@@ -22,7 +22,7 @@ interface Potato {
 
 const potatoes : Potato[] = [
       {
-        id: 'cln861xuw0002v26xxr28ipsw',
+        id: 'clna9jtbn0000v2saxs1xzad0',
         name: "Russet Potatoes",
         image: Potato1,
         details: {
@@ -35,7 +35,7 @@ const potatoes : Potato[] = [
         }
       },
       {
-        id: 'cln862z2z0003v26xmukioa6o',
+        id: 'clna9kcr80001v2sazz75qdlu',
         name: "Yukon Gold Potatoes",
         image: Potato2,
         details: {
@@ -48,7 +48,7 @@ const potatoes : Potato[] = [
         }
       },
       {
-        id: 'cln8634se0004v26xmxu76evi',
+        id: 'clna9kj700002v2sanjetufm8',
         name: "Red Potatoes",
         image: Potato3,
         details: {
@@ -61,7 +61,7 @@ const potatoes : Potato[] = [
         }
       },
       {
-        id: 'cln863g830005v26x5r8d4l0l',
+        id: 'clna9kppg0003v2sacscqq429',
         name: "Fingerling Potatoes",
         image: Potato4,
         details: {
@@ -74,7 +74,7 @@ const potatoes : Potato[] = [
         }
       },
       {
-        id: 'cln863jtg0006v26xr4d19xt9',
+        id: 'clna9kxy50004v2sabtqrdpos',
         name: "Purple Potatoes",
         image: Potato5,
         details: {
@@ -87,7 +87,7 @@ const potatoes : Potato[] = [
         }
       },
       {
-        id: 'cln863n2k0007v26xrq21u0mm',
+        id: 'clna9l63q0005v2sat1buwj3z',
         name: "Yellow Finn Potatoes",
         image: Potato6,
         details: {
@@ -100,7 +100,7 @@ const potatoes : Potato[] = [
         }
       },
       {
-        id: 'cln863prq0008v26xs6tqsxmp',
+        id: 'clna9lii80006v2sax24vprdb',
         name: "Kennebec Potatoes",
         image: Potato7,
         details: {
@@ -113,7 +113,7 @@ const potatoes : Potato[] = [
         }
       },
       {
-        id: 'cln863s6v0009v26xm6gsdtzj',
+        id: 'clna9lp9a0007v2sabdgcf4cy',
         name: "Maris Piper Potatoes",
         image: Potato8,
         details: {
@@ -125,7 +125,7 @@ const potatoes : Potato[] = [
         }
       },
       {
-        id: 'cln863w8j000av26xun58qsom',
+        id: 'clna9lvc60008v2sagyrd2ccw',
         name: "Yam Potatoes (Sweet Potatoes)",
         image: Potato9,
         details: {

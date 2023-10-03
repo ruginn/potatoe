@@ -21,7 +21,7 @@ import { redirect } from 'next/navigation';
 // }
 
 const PotatoRater = ({potato}) => {
-  console.log(potato)
+
   const [rate, setRate] = useState({})
   const [starRating, setStarRating] = useState(0)
   
@@ -32,7 +32,8 @@ const PotatoRater = ({potato}) => {
     const body = {
       post: formData.get('post'),
       potatoId: potato.id,
-      rating: starRating
+      rating: starRating, 
+      potatoName: potato.name
     }
     const res = await fetch('/api/post',  {
       method: 'POST',
