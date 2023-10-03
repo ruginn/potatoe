@@ -26,6 +26,13 @@ export async function POST(req: Request) {
     //     potatoId: data.potatoid
     //   }
     // })
+    const existingPost = await prisma.post.findMany({
+      where: {
+        userId: user?.id,  
+        potatoId: data.potatoId
+      }
+    })
+
     const newPost = await prisma.post.create({data: {post: data.post, rating: data.rating, userId: user?.id, potatoId: data.potatoId}})
 
 
