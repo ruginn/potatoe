@@ -33,3 +33,14 @@ export async function POST(req: Request) {
 
     return NextResponse.json('it worked')
 }
+
+export async function GET(req: Request) {
+  const data = await req.json()
+  const posts = await prisma.post.findMany({
+    where: {
+      id: data.id
+    }
+  })
+  
+  return NextResponse.json(posts)
+}

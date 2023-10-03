@@ -3,6 +3,7 @@ import Image from 'next/image'
 import PotatoRater from "@/app/component/PotatoRater";
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
+import UserRatings from "@/app/component/UserRatings";
 
 interface Potato {
     id: string| number;
@@ -40,6 +41,7 @@ async function PotatoPage({params}: any) {
             )
         })}
         <PotatoRater potato={potato} />
+        <UserRatings potato={potato}/>
     </div>
   )
 }
