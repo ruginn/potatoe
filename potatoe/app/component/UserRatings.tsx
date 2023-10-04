@@ -6,6 +6,9 @@ async function UserRatings({potato}) {
     const posts = await prisma.post.findMany({
         where: {
             potatoId: potato.id
+        }, 
+        include: {
+            user: true
         }
     })
     console.log('below are posts')
@@ -13,8 +16,10 @@ async function UserRatings({potato}) {
     console.log('above are posts')
     return (
     <div>
-        <h1>Posts</h1>
-        <PostRatings />
+        <h1>Ratings</h1>
+        {posts.map((post) => (
+            <PostRatings post={post}/>
+        ))}
     </div>
   )
 }

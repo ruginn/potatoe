@@ -15,7 +15,6 @@ function PotatoeFactsBanner() {
 
   const x1 = useTransform(scrollYProgress, [0,1], [-1000, 100])
 
-  console.log(scrollYProgress)
 
   return (
     <div className='w-screen h-screen flex flex-row'>

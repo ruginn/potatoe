@@ -33,6 +33,9 @@ export async function POST(req: Request) {
       }
     })
 
+    if (existingPost){
+      return NextResponse.json('You have already made a post')
+    }
     const newPost = await prisma.post.create({data: {post: data.post, rating: data.rating, userId: user?.id, potatoId: data.potatoId}})
 
 

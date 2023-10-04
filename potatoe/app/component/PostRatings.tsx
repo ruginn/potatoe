@@ -1,6 +1,10 @@
-function PostRatings() {
+function PostRatings({post}) {
   return (
-    <div>PostRatings</div>
+    <div>
+      <p>{post.user.name}</p>
+      <p>{post.rating}</p>
+      <h1>{post.post}</h1>
+    </div>
   )
 }
 

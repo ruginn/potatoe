@@ -22,7 +22,6 @@ async function PotatoPage({params}: any) {
     .then((res) => res.json())
 
     const potato = potatoes.find((potato) => potato.id.toString() === params.id)!
-    console.log(potatoes)
     
     // const session = await getServerSession(authOptions)
     // console.log(session)
@@ -43,7 +42,7 @@ async function PotatoPage({params}: any) {
             )
         })}
         <PotatoRater potato={potato} />
-        {/* <UserRatings potato={potato}/> */}
+        <UserRatings potato={potato}/>
     </div>
   )
 }

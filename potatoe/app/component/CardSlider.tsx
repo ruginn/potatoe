@@ -19,7 +19,7 @@ function CardSlider() {
 const [potatoe, setPotatoe] = useState([])
 
 useEffect(() => {
-  const potatoFetcher = fetch('http://localhost:3000/api/potatoes')
+  const potatoFetcher = fetch('http://localhost:3000/api/potato')
     .then((res) => res.json())
     .then((data) => setPotatoe(data))
 }, [])
