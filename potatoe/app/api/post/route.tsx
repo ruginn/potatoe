@@ -28,12 +28,14 @@ export async function POST(req: Request) {
     // })
     const existingPost = await prisma.post.findMany({
       where: {
-        userId: user?.id,  
-        potatoId: data.potatoId
+        AND: [
+          {userId: user?.id},  
+          {potatoId: data.potatoId}
+        ]
       }
     })
 
-    if (existingPost){
+    if (existingPost.length === 1){
       return NextResponse.json('You have already made a post')
     }
     const newPost = await prisma.post.create({data: {post: data.post, rating: data.rating, userId: user?.id, potatoId: data.potatoId}})
