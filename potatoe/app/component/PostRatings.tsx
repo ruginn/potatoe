@@ -2,7 +2,7 @@ import moment from "moment"
 import {BsStarFill, BsStar } from 'react-icons/bs'
 
 
-function PostRatings({post}) {
+function PostRatings({post}:any) {
   
   return (
     <div className="w-96 h-24 border">
