@@ -1,6 +1,6 @@
 'use server'
-
 import {revalidateTag } from "next/cache"
+import { Potato } from "@/typings"
 
 const createPost = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
