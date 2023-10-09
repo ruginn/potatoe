@@ -1,17 +1,8 @@
 import { StaticImageData } from "next/image";
 import  Image  from "next/image";
 import Link from "next/link";
+import {Potato} from '@/typings'
 
-
-interface Potato {
-  id: number;
-  name: string; 
-  image: StaticImageData;
-  details: {
-    description: string;
-    best_uses: string[]
-  }
-}
 
 async function page() {
 

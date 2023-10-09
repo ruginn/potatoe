@@ -1,9 +1,11 @@
 import PostRatings from "./PostRatings"
 import {prisma} from '@/lib/prisma'
+import {Potato} from '@/typings'
+import { revalidateTag } from "next/cache"
 
-
-async function UserRatings({potato}) {
-    const posts = await prisma.post.findMany({
+async function getPost(potato:Potato) {
+    'use server'
+    return await prisma.post.findMany({
         where: {
             potatoId: potato.id
         }, 
@@ -11,9 +13,13 @@ async function UserRatings({potato}) {
             user: true
         }
     })
-    console.log('below are posts')
-    console.log(posts)
-    console.log('above are posts')
+    // revalidateTag('post')
+}
+
+async function UserRatings({potato}) {
+
+    const posts = await getPost(potato)
+
     return (
     <div>
         <h1>Ratings</h1>
