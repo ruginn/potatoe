@@ -4,7 +4,7 @@ import Link from "next/link"
 
 export default function Navbar () {
     return (
-        <div className="flex w-screen justify-between h-12 items-center bg-slate-50 bg-opacity-10 border-b border-opacity-40 border-white">
+        <nav className="flex w-screen justify-between h-12 items-center bg-slate-50 bg-opacity-10 border-b border-opacity-40 border-white">
             <Link href='/' className="flex flex-row">
                 <h1 className="text-4xl mx-2 cursor-pointer outline--text--1 font-bold text-transparent ">El</h1> 
                 <h1 className="text-4xl font-bold cursor-pointer text-white">Potatoe</h1>
@@ -19,6 +19,6 @@ export default function Navbar () {
                 </li>
                 {/* <li className="mx-3 cursor-pointer">Register</li> */}
             </ul>
-        </div>
+        </nav>
     )
 }
