@@ -2,7 +2,11 @@ import Image from 'next/image'
 import PotatoeCream from '../../public/assets/pexels-joaquin-egea-88924.jpg'
 
 
-function goop() {
+async function goop() {
+  const res = await fetch('http://jsonplaceholder.typicode.com/users')
+
+  if (!res.ok) throw new Error('failed to fetch')
+  
   return (
     <div className='w-screen h-96 bg-amber-50 relative -z-40'>
       <div className='absolute -right-0'>
