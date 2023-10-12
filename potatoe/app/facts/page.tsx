@@ -60,6 +60,7 @@ import { FiArrowDown, FiArrowUp } from "react-icons/fi";
 import { useRef, useEffect, useState } from "react";
 import Image from 'next/image'
 
+// need to move components to actual page
 const OppoScroll = () => {
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({
