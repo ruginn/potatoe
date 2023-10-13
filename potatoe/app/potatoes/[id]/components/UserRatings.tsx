@@ -1,4 +1,4 @@
-import PostRatings from "./PostRatings"
+import PostRatings from "../../../component/PostRatings"
 import {prisma} from '@/lib/prisma'
 import {Potato} from '@/typings'
 import { revalidateTag } from "next/cache"

@@ -1,9 +1,9 @@
 import { StaticImageData } from "next/image";
 import Image from 'next/image'
-import PotatoRater from "@/app/component/PotatoRater";
+import PotatoRater from "@/app/potatoes/[id]/components/PotatoRater";
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
-import UserRatings from "@/app/component/UserRatings";
+import UserRatings from "@/app/potatoes/[id]/components/UserRatings";
 
 interface Potato {
     id: string| number;

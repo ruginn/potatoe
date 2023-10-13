@@ -3,7 +3,7 @@ import {useState, useEffect} from 'react'
 import {prisma} from '@/lib/prisma'
 import {BsStarFill, BsStar } from 'react-icons/bs'
 import { getServerSession } from "next-auth";
-import { authOptions } from '../../app/api/auth/[...nextauth]/route'
+import { authOptions } from '../../../api/auth/[...nextauth]/route'
 import { redirect } from 'next/navigation';
 
 // async function createPost(data: FormData) {
