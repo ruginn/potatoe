@@ -3,6 +3,8 @@ import {prisma} from '@/lib/prisma'
 import {Potato} from '@/typings'
 import { revalidateTag } from "next/cache"
 
+
+// handle this section in the api so things can be reloaded with next revalidate tag
 async function getPost(potato:Potato) {
     'use server'
     return await prisma.post.findMany({
