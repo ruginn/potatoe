@@ -5,6 +5,7 @@ import { revalidateTag } from "next/cache"
 
 
 // handle this section in the api so things can be reloaded with next revalidate tag
+// need to use api slug
 
 // need to use params to find potato by id 
 async function getPost(potato:Potato) {
