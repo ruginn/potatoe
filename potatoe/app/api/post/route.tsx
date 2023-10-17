@@ -53,6 +53,8 @@ export async function POST(req: Request) {
 //       id: data.id
 //     }
 //   })
-  
-//   return NextResponse.json('this is working')
+//   console.log('this is post')
+//   console.log(posts)
+
+//   return NextResponse.json(posts)
 // }

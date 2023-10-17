@@ -5,6 +5,8 @@ import { revalidateTag } from "next/cache"
 
 
 // handle this section in the api so things can be reloaded with next revalidate tag
+
+// need to use params to find potato by id 
 async function getPost(potato:Potato) {
     'use server'
     return await prisma.post.findMany({
@@ -20,7 +22,9 @@ async function getPost(potato:Potato) {
 
 async function UserRatings({potato}) {
 
-    const posts = await getPost(potato)
+    const posts = await getPost(potato) 
+
+
 
     return (
     <div>

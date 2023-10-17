@@ -50,7 +50,7 @@ const PotatoRater = ({potato}) => {
     })
     await res.json()
     setPost('')
-    router.refresh()
+    // router.refresh()
   }
 
 
