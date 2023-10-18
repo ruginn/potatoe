@@ -23,9 +23,14 @@ async function getPost(potato:Potato) {
 
 async function UserRatings({potato}) {
 
-    const posts = await getPost(potato) 
+    // const posts = await getPost(potato) 
 
-
+    const posts = await fetch(`http://localhost:3000/api/post/${potato.id}`, {
+        cache: 'no-cache', 
+        next: {
+            tags: ['posts'],
+        }
+    }).then((res) => res.json()) 
 
     return (
     <div>

@@ -6,6 +6,7 @@ import { getServerSession } from "next-auth";
 import { authOptions } from '../../../api/auth/[...nextauth]/route'
 import { redirect } from 'next/navigation';
 import { useRouter } from 'next/navigation';
+import { revalidateTag } from 'next/cache';
 
 // async function createPost(data: FormData) {
 //   'use server'
@@ -48,9 +49,10 @@ const PotatoRater = ({potato}) => {
         'Content-Type': 'application/json'
       } ,
     })
-    await res.json()
+    // await res.json()
     setPost('')
     // router.refresh()
+    revalidateTag('posts')
   }
 
 
