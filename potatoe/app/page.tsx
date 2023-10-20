@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <main >
       <PotatoHero />
-      <Hero /> 
+      {/* <Hero />  */}
       <PotatoeGrid />
       {/* <PotatoeBanner /> */}
       {/* <Goop /> */}

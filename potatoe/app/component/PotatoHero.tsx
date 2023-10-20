@@ -9,20 +9,22 @@ function PotatoHero() {
     const ref = useRef(null)
     const {scrollYProgress} = useScroll({
         target: ref, 
-        offset: ["0 1", "1.33, 1"],
+        offset: ["1 0", "1.33 1"],
     })
 
-    const x1 = useTransform(scrollYProgress, [0,1], [-40000, 700])
+    const x1 = useTransform(scrollYProgress, [0,1], [50, -500])
   return (
     <div className='w-screen relative h-[80vh]'>
-        <div className='w-screen h-full absolute z-1'>
+        <div className='w-screen h-full absolute z-10'>
             <Image 
                 src={particleTexture}
                 alt=''
                 className='w-screen h-full object-cover'
             ></Image>
         </div>
-        <div className='bg-gradient-to-tr from-amber-300 via-yellow-100 to-amber-200 w-full h-full absolute z-2 opacity-80 flex justify-center items-center'>
+        <div className='rounded-full w-64 h-96 absolute bg-purple-800 left-8 top-8 z-20 blur-2xl'></div>
+        <div className='rounded-full w-96 h-96 absolute bg-blue-800 bottom-8 right-2 z-20 blur-2xl'></div>
+        <div className='bg-gradient-to-tr from-amber-300 via-yellow-100 to-amber-200 w-full h-full absolute z-30 opacity-80 flex justify-center items-center'>
             <div className='flex flex-col h-full justify-center items-center relative'>
             <motion.div
                 initial={{ rotate: 45, }}
@@ -38,7 +40,7 @@ function PotatoHero() {
                   // opacity: scrollYProgress, 
                   x: x1
                 }}
-                className='absolute'
+                className='absolute '
               >
                 <Image 
                   ref={ref}
