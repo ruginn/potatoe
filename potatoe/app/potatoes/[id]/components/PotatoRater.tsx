@@ -51,6 +51,7 @@ const PotatoRater = ({potato}) => {
     })
     // await res.json()
     setPost('')
+    setStarRating(0)
     // router.refresh()
     revalidateTag('posts')
   }
